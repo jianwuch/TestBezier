@@ -70,7 +70,7 @@ public class WaveViewSin extends View {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                //水平方向的偏移量
+                //水平方向的偏移量,产生左移sin线的动画
                 phase = (float) Math.toRadians((int) animation.getAnimatedValue());
                 invalidate();
             }
