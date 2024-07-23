@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,19 +10,29 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="?attr/fullscreenTextColor"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
+        android:orientation="vertical">
+        <com.jove.myapplication.BezierCurveView
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <com.jove.myapplication.WaveView
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
         <com.jove.myapplication.WaveViewSin
             android:id="@+id/customView"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
-</FrameLayout>
+
+        <com.jove.myapplication.ProgressTextView
+            android:id="@+id/progressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="我是中国人" />
+    </LinearLayout>
+</ScrollView>

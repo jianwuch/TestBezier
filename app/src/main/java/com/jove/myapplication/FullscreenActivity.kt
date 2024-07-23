@@ -1,5 +1,7 @@
 package com.jove.myapplication
 
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.os.Build
@@ -28,6 +30,11 @@ class FullscreenActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.customView.startAnimation()
+
+        ObjectAnimator.ofFloat(binding.progressTextView, "progress", 0f, 1f).apply {
+            duration = 2000
+            repeatCount = ValueAnimator.INFINITE
+        }.start()
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
