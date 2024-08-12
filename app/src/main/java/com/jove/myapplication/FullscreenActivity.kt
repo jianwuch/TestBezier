@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -14,6 +15,7 @@ import android.view.WindowInsets
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.jove.myapplication.databinding.ActivityFullscreenBinding
+import com.jove.myapplication.motionlayout.MotionLayoutActivity
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -35,6 +37,10 @@ class FullscreenActivity : AppCompatActivity() {
             duration = 2000
             repeatCount = ValueAnimator.INFINITE
         }.start()
+
+        binding.motionLayout.setOnClickListener{
+            startActivity(Intent(this, MotionLayoutActivity::class.java))
+        }
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

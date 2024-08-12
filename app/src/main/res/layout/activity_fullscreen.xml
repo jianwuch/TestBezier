@@ -15,6 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MotionLayout" />
         <com.jove.myapplication.BezierCurveView
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -34,5 +39,6 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:text="我是中国人" />
+
     </LinearLayout>
 </ScrollView>
