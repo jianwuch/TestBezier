@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.MyApplication.FullscreenContainer"
-    tools:context=".FullscreenActivity">
+    tools:context="com.jove.widget.FullscreenActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -15,30 +15,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/motionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MotionLayout" />
-        <com.jove.myapplication.BezierCurveView
+
+        <com.jove.widget.BezierCurveView
             android:layout_width="match_parent"
             android:layout_height="200dp" />
-        <com.jove.myapplication.WaveView
+
+        <com.jove.widget.WaveView
             android:layout_width="match_parent"
             android:layout_height="200dp" />
-        <com.jove.myapplication.WaveViewSin
+
+        <com.jove.widget.WaveViewSin
             android:id="@+id/customView"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
 
-        <com.jove.myapplication.ProgressTextView
+        <com.jove.widget.ProgressTextView
             android:id="@+id/progressTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:text="我是中国人" />
+            android:text="我是中国人进度条"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jove.widget.StrokeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff0"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="b单TextView实现描边d"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

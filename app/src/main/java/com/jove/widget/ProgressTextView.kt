@@ -1,4 +1,4 @@
-package com.jove.myapplication
+package com.jove.widget
 
 import android.content.Context
 import android.graphics.Canvas

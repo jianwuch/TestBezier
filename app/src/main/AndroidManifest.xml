@@ -16,7 +16,7 @@
             android:name=".motionlayout.MotionLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".FullscreenActivity"
+            android:name="com.jove.widget.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:label="@string/title_activity_fullscreen"
